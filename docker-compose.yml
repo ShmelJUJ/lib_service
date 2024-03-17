@@ -1,0 +1,38 @@
+version: '3.8'
+
+name: myproject
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=lib
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    build: pythonProject/
+    depends_on:
+      db: 
+        condition: service_started
+    command:  uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 5000
+    ports:
+      - "5000:5000"
+
+
+  frontend:
+    build: front/
+    depends_on:
+      backend:
+        condition:  service_started
+    ports:
+      - "5173:80"
+    
+
+volumes:
+  db_data:

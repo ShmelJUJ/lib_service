@@ -1,0 +1,104 @@
+.search__container {
+    display:flex;
+    align-items: center;
+    margin: 20px 20px;
+    padding: 10px 10px;
+}
+
+.search_btn {
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.search_btn:hover {
+    background-color: #545454;
+  }
+
+.search_img {
+  width: 3.5rem;
+}
+
+.books__container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px;
+    padding: 10px 10px;
+    width: 82%;
+}
+
+.books__container td,
+.books__container th {
+    padding: 5px 15px;
+}
+
+.book__item {
+    background-color: #404040;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    
+}
+
+.book__item td {
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.table__header {
+    background-color: #242424;
+
+}
+
+.book__title {
+  width:35%;
+}
+
+.book__date {
+  width: 10%;
+}
+
+.book__authors {
+    width: 25%;
+}
+
+.book__genre {
+  width: 10%;
+}
+
+.book__amount {
+    width: 15%;
+}
+
+.blue__button {
+    background-color: #2020ff;
+}
+
+.blue__button:hover {
+    background-color: #2020aa;
+}
+
+.book__info__container {
+    min-height: 40vh;
+}
+
+.book__short__info {
+  width: 60vw;
+}
+
+.datepicker {
+  padding: 5px 10px;
+  font-size: 1rem;
+  margin: 5px 10px;
+  width: 13rem;
+}
+
+.endDate__container {
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+}
